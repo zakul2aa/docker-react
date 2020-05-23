@@ -1,6 +1,9 @@
 sudo: required
 services:
   - docker
+cache:
+  directories:
+    - node_modules
 
 before_install:
   - docker build -t zakul2aa/docker-react -f Dockerfile.dev .
